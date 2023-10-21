@@ -521,16 +521,26 @@ namespace Loader
 
         private void siticoneRoundedButton2_Click(object sender, EventArgs e)
         {
-            string retirer = "DELETE FROM Rembourse WHERE Id ='" + siticoneRoundedTextBox3.Text + "';";
-            MySqlCommand comando = new MySqlCommand(retirer)
+            // Utilisez des requêtes paramétrées pour éviter l'injection SQL
+            string retirerQuery = "DELETE FROM Rembourse WHERE Id = @id";
+
+            using (MySqlConnection connection = Conect())
             {
-                Connection = Conect()
-            };
-            comando.ExecuteNonQuery();
-            comando.Connection.Close();
+                connection.Open();
+                using (MySqlCommand comando = new MySqlCommand(retirerQuery, connection))
+                {
+                    // Assurez-vous de définir le type de paramètre approprié, en fonction de la colonne "Id" de la table Rembourse.
+                    comando.Parameters.AddWithValue("@id", siticoneRoundedTextBox3.Text);
+
+                    comando.ExecuteNonQuery();
+                }
+            }
+
+            // Le reste de votre code pour la mise à jour de l'interface utilisateur
             Removeremb();
             ActualizarList();
         }
+
 
         private void btnTools_Click(object sender, EventArgs e)
         {
