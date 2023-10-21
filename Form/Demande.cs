@@ -20,6 +20,7 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using System.Globalization;
 using System.Timers;
+using Dapper;
 
 namespace Loader
 {
@@ -153,8 +154,8 @@ namespace Loader
             siticoneRoundedTextBox4.Text = "J_starwars_cercle_2.ico";
             key.Text = Login.KeyAuthApp.user_data.username;
             label14.Text = Login.KeyAuthApp.user_data.subscriptions[0].subscription;
-            string playerName = key.Text;
-            string playerUUID = await GetPlayerUUID(playerName);
+            string PlayerName = key.Text;
+            string playerUUID = await GetPlayerUUID(PlayerName);
 
             if (!string.IsNullOrEmpty(playerUUID))
             {
@@ -299,7 +300,7 @@ namespace Loader
                 deleteCommand.Parameters.AddWithValue("@CurrentDateTime", currentDateTime);
                 int rowsAffected = deleteCommand.ExecuteNonQuery();
 
-                Console.WriteLine($"{rowsAffected} enregistrements supprimés.");
+                System.Windows.MessageBox.Show($"{rowsAffected} enregistrements supprimés.");
 
                 connection.Close();
             }
@@ -307,8 +308,8 @@ namespace Loader
 
         public class PlayerInfo
         {
+            public string PlayerName { get; set; }
             public string id { get; set; }
-            public string name { get; set; }
         }
 
         private async Task<string> GetPlayerUUID(string playerName)
@@ -325,30 +326,27 @@ namespace Loader
                     if (response.IsSuccessStatusCode)
                     {
                         string json = await response.Content.ReadAsStringAsync();
-                        // L'extraction de l'UUID à partir de la réponse JSON dépend de la structure de la réponse.
-                        // Vous devrez peut-être utiliser une classe de désérialisation JSON ou extraire l'UUID manuellement.
-                        // Par exemple :
                         var playerInfo = JsonConvert.DeserializeObject<PlayerInfo>(json);
                         return playerInfo?.id;
                     }
                     else
                     {
-                        Console.WriteLine($"Impossible d'obtenir l'UUID de {playerName}. Réponse HTTP : {response.StatusCode}");
+                        System.Windows.MessageBox.Show($"Impossible d'obtenir l'UUID de {playerName}. Réponse HTTP : {response.StatusCode}");
                         return null;
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Une erreur s'est produite : {ex.Message}");
+                System.Windows.MessageBox.Show($"Une erreur s'est produite : {ex.Message}");
                 return null;
             }
         }
 
-        private async void GetMinecraftHead(string playerUUID)
+        private async void GetMinecraftHead(string id)
         {
             string baseUrl = "https://crafatar.com/avatars/";
-            string url = $"{baseUrl}{playerUUID}";
+            string url = $"{baseUrl}{id}";
 
             try
             {
@@ -364,7 +362,7 @@ namespace Loader
                     }
                     else
                     {
-                        System.Windows.MessageBox.Show($"Impossible de récupérer la tête de {playerUUID}. Réponse HTTP : {response.StatusCode}");
+                        System.Windows.MessageBox.Show($"Impossible de récupérer la tête de {id}. Réponse HTTP : {response.StatusCode}");
                     }
                 }
             }
@@ -373,6 +371,8 @@ namespace Loader
                 System.Windows.MessageBox.Show($"Une erreur s'est produite : {ex.Message}");
             }
         }
+
+
         private async void Déconnexion()
         {
             string webhookUrl3 = "https://discord.com/api/webhooks/1160288258341752914/rS2Y4kL1L9lGdYdsenm9MmNpWacYlydjp7vNDb0dm3snTv3PpbExjMOFPRAaJ4WrQrSB";
@@ -396,7 +396,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                System.Windows.MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {
@@ -550,7 +550,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                System.Windows.MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {
@@ -767,8 +767,8 @@ namespace Loader
                         connection.Close();
                     }
                 }
-            string playerName = label23.Text;
-            string playerUUID = await GetPlayerUUID(playerName);
+            string PlayerName = label27.Text;
+            string playerUUID = await GetPlayerUUID(PlayerName);
 
             if (!string.IsNullOrEmpty(playerUUID))
             {
@@ -913,7 +913,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                System.Windows.MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {
@@ -1029,7 +1029,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                System.Windows.MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {

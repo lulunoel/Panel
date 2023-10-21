@@ -92,14 +92,14 @@ namespace Loader
                     }
                     else
                     {
-                        Console.WriteLine($"Impossible d'obtenir l'UUID de {playerName}. Réponse HTTP : {response.StatusCode}");
+                        MessageBox.Show($"Impossible d'obtenir l'UUID de {playerName}. Réponse HTTP : {response.StatusCode}");
                         return null;
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Une erreur s'est produite : {ex.Message}");
+                MessageBox.Show($"Une erreur s'est produite : {ex.Message}");
                 return null;
             }
         }
@@ -272,7 +272,7 @@ namespace Loader
                 deleteCommand.Parameters.AddWithValue("@CurrentDateTime", currentDateTime);
                 int rowsAffected = deleteCommand.ExecuteNonQuery();
 
-                Console.WriteLine($"{rowsAffected} enregistrements supprimés.");
+                //MessageBox.Show($"{rowsAffected} enregistrements supprimés.");
 
                 connection.Close();
             }
@@ -301,7 +301,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {
@@ -471,7 +471,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {
@@ -566,7 +566,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {

@@ -391,7 +391,7 @@ namespace KeyAuth
             }
             else
             {
-                Console.WriteLine(json.message);
+                MessageBox.Show(json.message);
                 responsepp.StatusCode = (int)HttpStatusCode.OK;
                 responsepp.StatusDescription = json.message;
                 success = false;

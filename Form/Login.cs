@@ -159,7 +159,7 @@ namespace KeyAuth
                                         }
                                         catch (Exception ex)
                                         {
-                                            Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                                            MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
                                         }
                                         finally
                                         {
@@ -221,7 +221,7 @@ namespace KeyAuth
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Une erreur est survenue lors de l'enregistrement des identifiants : " + ex.Message);
+                MessageBox.Show("Une erreur est survenue lors de l'enregistrement des identifiants : " + ex.Message);
             }
         }
 
@@ -337,7 +337,7 @@ namespace KeyAuth
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                    MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
                 }
                 finally
                 {

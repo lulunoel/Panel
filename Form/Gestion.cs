@@ -192,7 +192,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {
@@ -258,7 +258,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {
@@ -391,7 +391,7 @@ namespace Loader
                 deleteCommand.Parameters.AddWithValue("@CurrentDateTime", currentDateTime);
                 int rowsAffected = deleteCommand.ExecuteNonQuery();
 
-                Console.WriteLine($"{rowsAffected} enregistrements supprimés.");
+                //MessageBox.Show($"{rowsAffected} enregistrements supprimés.");
 
                 connection.Close();
             }
@@ -435,7 +435,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {

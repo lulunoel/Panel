@@ -103,7 +103,7 @@ namespace Loader
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erreur lors de l'envoi du log : " + ex.Message);
+                MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
             }
             finally
             {
@@ -297,7 +297,7 @@ namespace Loader
                 deleteCommand.Parameters.AddWithValue("@CurrentDateTime", currentDateTime);
                 int rowsAffected = deleteCommand.ExecuteNonQuery();
 
-                Console.WriteLine($"{rowsAffected} enregistrements supprimés.");
+                //MessageBox.Show($"{rowsAffected} enregistrements supprimés.");
 
                 connection.Close();
             }
@@ -331,14 +331,14 @@ namespace Loader
                     }
                     else
                     {
-                        Console.WriteLine($"Impossible d'obtenir l'UUID de {playerName}. Réponse HTTP : {response.StatusCode}");
+                        MessageBox.Show($"Impossible d'obtenir l'UUID de {playerName}. Réponse HTTP : {response.StatusCode}");
                         return null;
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Une erreur s'est produite : {ex.Message}");
+                MessageBox.Show($"Une erreur s'est produite : {ex.Message}");
                 return null;
             }
         }
@@ -401,7 +401,7 @@ namespace Loader
             request.AddHeader("accept", "application/json");
             var response = await client.GetAsync(request);
 
-            Console.WriteLine("{0}", response.Content);
+            MessageBox.Show("{0}", response.Content);
             siticoneRoundedTextBox1.Text = Login.KeyAuthApp.user_data.username;
             key.Text = Login.KeyAuthApp.user_data.username;
             label14.Text = Login.KeyAuthApp.user_data.subscriptions[0].subscription;
@@ -447,7 +447,7 @@ namespace Loader
             request.AddHeader("accept", "application/json");
             var response = await client.GetAsync(request);
 
-            Console.WriteLine("{0}", response.Content);
+            MessageBox.Show("{0}", response.Content);
             siticoneRoundedTextBox1.Text = Login.KeyAuthApp.user_data.username;
             key.Text = Login.KeyAuthApp.user_data.username;
             label14.Text = Login.KeyAuthApp.user_data.subscriptions[0].subscription;
