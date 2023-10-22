@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Discord;
+using Discord.Webhook;
 using Loader;
 using MySql.Data.MySqlClient;
-using RestSharp;
 using Newtonsoft.Json;
-using static Loader.Gestion;
-using System.Linq;
+using RestSharp;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
-using Discord.Webhook;
-using Discord;
-using System.Net.Http;
 using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Timers;
+using System.Windows.Forms;
+using static Loader.Gestion;
 
 namespace KeyAuth
 {
@@ -267,6 +267,13 @@ namespace KeyAuth
             timer.Elapsed += TimerElapsed;
             timer.AutoReset = true; // Définir AutoReset à true pour que le minuteur se répète
             timer.Start();
+            this.FormClosing += Form_Closing;
+        }
+
+        private void Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            // Annuler la fermeture
+            e.Cancel = true;
         }
 
         private void SendTimer_Elapsed(object sender, ElapsedEventArgs e)
@@ -891,6 +898,8 @@ namespace KeyAuth
             await Task.Delay(TimeSpan.FromSeconds(1));
 
             Environment.Exit(0); // Quittez l'application après le délai
+            this.Close(); // Cela déclenchera à nouveau l'événement Form_Closing
+
         }
 
         private void siticoneRoundedButton7_Click(object sender, EventArgs e)

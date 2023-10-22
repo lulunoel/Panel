@@ -108,7 +108,7 @@
             this.listBox1.HorizontalExtent = 1;
             this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(188, 448);
+            this.listBox1.Location = new System.Drawing.Point(203, 441);
             this.listBox1.Name = "listBox1";
             this.listBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBox1.Size = new System.Drawing.Size(1272, 370);
@@ -118,7 +118,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(127)))), ((int)(((byte)(243)))));
-            this.panel1.Location = new System.Drawing.Point(187, 447);
+            this.panel1.Location = new System.Drawing.Point(202, 440);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1274, 373);
             this.panel1.TabIndex = 205;
@@ -176,7 +176,7 @@
             this.panel6.Controls.Add(this.button1);
             this.panel6.Controls.Add(this.button2);
             this.panel6.Controls.Add(this.btnTools);
-            this.panel6.Location = new System.Drawing.Point(13, 154);
+            this.panel6.Location = new System.Drawing.Point(13, 150);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(168, 666);
             this.panel6.TabIndex = 201;

@@ -31,7 +31,7 @@
     <MinimumRequiredVersion>1.0.0.1</MinimumRequiredVersion>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>56</ApplicationRevision>
+    <ApplicationRevision>58</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -230,6 +230,7 @@
     <Compile Include="Demande.Designer.cs">
       <DependentUpon>Demande.cs</DependentUpon>
     </Compile>
+    <Compile Include="Demandes.cs" />
     <Compile Include="Gestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +243,12 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Overlays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Overlays.Designer.cs">
+      <DependentUpon>Overlays.cs</DependentUpon>
     </Compile>
     <Compile Include="Vérif.cs">
       <SubType>Form</SubType>
@@ -282,7 +289,6 @@
       <DependentUpon>Rembourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Remb.cs" />
-    <Compile Include="Demandes.cs" />
     <Compile Include="vérifs.cs" />
     <Compile Include="Warns.cs" />
     <EmbeddedResource Include="Demande.resx">
@@ -298,6 +304,9 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Overlays.resx">
+      <DependentUpon>Overlays.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vérif.resx">
       <DependentUpon>Vérif.cs</DependentUpon>

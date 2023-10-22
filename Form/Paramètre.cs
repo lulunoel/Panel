@@ -1,25 +1,18 @@
-﻿using Discord.Webhook;
-using Discord;
+﻿using Discord;
+using Discord.Webhook;
 using KeyAuth;
 using MySql.Data.MySqlClient;
-using RestSharp;
-using Siticone.UI.WinForms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using Newtonsoft.Json;
+using RestSharp;
+using System;
+using System.Diagnostics;
+using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Net.Http;
-using System.Diagnostics;
-using System.Globalization;
+using System.Threading.Tasks;
 using System.Timers;
+using System.Windows.Forms;
 
 namespace Loader
 {
@@ -138,6 +131,7 @@ namespace Loader
             await Task.Delay(TimeSpan.FromSeconds(1));
 
             Environment.Exit(0); // Quittez l'application après le délai
+            this.Close(); // Cela déclenchera à nouveau l'événement Form_Closing
         }
 
         public DateTime UnixTimeToDateTime(long unixtime)
@@ -247,6 +241,13 @@ namespace Loader
             timer.Elapsed += TimerElapsed;
             timer.AutoReset = true; // Définir AutoReset à true pour que le minuteur se répète
             timer.Start();
+            this.FormClosing += Form_Closing;
+        }
+
+        private void Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            // Annuler la fermeture
+            e.Cancel = true;
         }
 
         private void SendTimer_Elapsed(object sender, ElapsedEventArgs e)
@@ -489,6 +490,15 @@ namespace Loader
         private void siticoneRoundedButton8_Click(object sender, EventArgs e)
         {
             Process.Start("https://ban.jedisky.fr/index.php");
+        }
+
+        private async void btnExit_Click(object sender, EventArgs e)
+        {
+            Déconnexion(); // Exécute la fonction de déconnexion
+            await Task.Delay(TimeSpan.FromSeconds(1));
+
+            Environment.Exit(0); // Quittez l'application après le délai
+            this.Close(); // Cela déclenchera à nouveau l'événement Form_Closing
         }
     }
 }

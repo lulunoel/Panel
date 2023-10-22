@@ -1,28 +1,20 @@
-﻿using Discord.Webhook;
-using Discord;
+﻿using Discord;
+using Discord.Webhook;
 using KeyAuth;
 using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Net.Http;
-using HtmlAgilityPack;
-using static System.Net.WebRequestMethods;
-using Newtonsoft.Json;
-using System.IO;
-using System.Text.RegularExpressions;
-using System.Data.SqlClient;
-using System.Timers;
-using System.Globalization;
-using System.Net;
-using System.Windows.Controls;
 using System.Diagnostics;
+using System.Drawing;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Timers;
+using System.Windows.Forms;
 
 namespace Loader
 {
@@ -174,6 +166,13 @@ namespace Loader
             timer.Start();
             Add();
             Actu();
+            this.FormClosing += Form_Closing;
+        }
+
+        private void Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            // Annuler la fermeture
+            e.Cancel = true;
         }
 
         private async void Déconnexion()
@@ -234,6 +233,7 @@ namespace Loader
             await Task.Delay(TimeSpan.FromSeconds(1));
 
             Environment.Exit(0); // Quittez l'application après le délai
+            this.Close(); // Cela déclenchera à nouveau l'événement Form_Closing
         }
 
         private void btnTools_Click(object sender, EventArgs e)
@@ -270,6 +270,8 @@ namespace Loader
             await Task.Delay(TimeSpan.FromSeconds(1));
 
             Environment.Exit(0); // Quittez l'application après le délai
+            this.Close(); // Cela déclenchera à nouveau l'événement Form_Closing
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -435,10 +437,10 @@ namespace Loader
                         MessageBox.Show("Nombre total de pages non trouvé sur la première page.");
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     // Gérez les erreurs ici
-                    MessageBox.Show("Une erreur s'est produite : " + ex.Message);
+                    MessageBox.Show("Erreur : Aucune sanction trouvée");
                 }
             }
         }
@@ -550,10 +552,10 @@ namespace Loader
                         MessageBox.Show("Nombre total de pages non trouvé sur la première page.");
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     // Gérez les erreurs ici
-                    MessageBox.Show("Une erreur s'est produite : " + ex.Message);
+                    MessageBox.Show("Erreur : Aucune sanction trouvée");
                 }
             }
         }
@@ -664,10 +666,10 @@ namespace Loader
                         MessageBox.Show("Nombre total de pages non trouvé sur la première page.");
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     // Gérez les erreurs ici
-                    MessageBox.Show("Une erreur s'est produite : " + ex.Message);
+                    MessageBox.Show("Erreur : Aucune sanction trouvée");
                 }
             }
         }
@@ -778,10 +780,10 @@ namespace Loader
                         MessageBox.Show("Nombre total de pages non trouvé sur la première page.");
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     // Gérez les erreurs ici
-                    MessageBox.Show("Une erreur s'est produite : " + ex.Message);
+                    MessageBox.Show("Erreur : Aucune sanction trouvée");
                 }
             }
         }
@@ -984,6 +986,11 @@ namespace Loader
         private void siticoneRoundedButton8_Click(object sender, EventArgs e)
         {
             Process.Start("https://ban.jedisky.fr/index.php");
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

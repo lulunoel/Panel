@@ -439,6 +439,7 @@
             this.listBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listBox2.Size = new System.Drawing.Size(829, 178);
             this.listBox2.TabIndex = 210;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // label4
             // 

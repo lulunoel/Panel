@@ -117,221 +117,368 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;LoginBtn.Type" xml:space="preserve">
-    <value>Siticone.UI.WinForms.SiticoneRoundedButton, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="siticoneControlBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 167</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
-  </data>
-  <data name="&gt;&gt;siticoneDragControl1.Type" xml:space="preserve">
-    <value>Siticone.UI.WinForms.SiticoneDragControl, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
-  </data>
-  <data name="siticoneControlBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 36</value>
-  </data>
-  <data name="&gt;&gt;siticoneShadowForm.Type" xml:space="preserve">
-    <value>Siticone.UI.WinForms.SiticoneShadowForm, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
-  </data>
-  <data name="username.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 37</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;siticoneControlBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="status.Text" xml:space="preserve">
-    <value>Status: Awaiting login</value>
-  </data>
-  <data name="&gt;&gt;LoginBtn.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="key.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 193</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 235</value>
-  </data>
-  <data name="siticoneControlBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="LoginBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LoginBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="siticoneControlBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 5</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
   </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 363</value>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;siticoneControlBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;username.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="username.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;status.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;password.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 10.2pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="LoginBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="&gt;&gt;status.Type" xml:space="preserve">
+    <value>Siticone.UI.WinForms.SiticoneLabel, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;siticoneControlBox1.Name" xml:space="preserve">
-    <value>siticoneControlBox1</value>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+  <data name="username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 99</value>
+  </data>
+  <data name="&gt;&gt;siticoneControlBox1.Type" xml:space="preserve">
+    <value>Siticone.UI.WinForms.SiticoneControlBox, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RgstrBtn.Name" xml:space="preserve">
+    <value>RgstrBtn</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 363</value>
+  </data>
+  <data name="siticoneControlBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="&gt;&gt;key.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="RgstrBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="RgstrBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="username.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 37</value>
+  </data>
+  <data name="LoginBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 291</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>113</value>
+  </data>
+  <data name="&gt;&gt;status.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;siticoneControlBox2.Type" xml:space="preserve">
+    <value>Siticone.UI.WinForms.SiticoneControlBox, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
+  </data>
+  <data name="&gt;&gt;siticoneRoundedButton1.Type" xml:space="preserve">
+    <value>Siticone.UI.WinForms.SiticoneRoundedButton, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="siticoneControlBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 36</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;LoginBtn.Name" xml:space="preserve">
+    <value>LoginBtn</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;siticoneDragControl1.Name" xml:space="preserve">
+    <value>siticoneDragControl1</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RgstrBtn.Type" xml:space="preserve">
+    <value>Siticone.UI.WinForms.SiticoneRoundedButton, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
+  </data>
+  <data name="key.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 193</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 146</value>
+  </data>
   <data name="&gt;&gt;siticoneRoundedButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="status.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 379</value>
+  </data>
+  <data name="RgstrBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;siticoneControlBox2.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 155</value>
+  </data>
+  <data name="&gt;&gt;siticoneRoundedButton1.Name" xml:space="preserve">
+    <value>siticoneRoundedButton1</value>
+  </data>
+  <data name="&gt;&gt;siticoneControlBox2.Name" xml:space="preserve">
+    <value>siticoneControlBox2</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 167</value>
+  </data>
+  <data name="&gt;&gt;LoginBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RgstrBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;siticoneControlBox1.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;siticoneControlBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;siticoneShadowForm.Name" xml:space="preserve">
+    <value>siticoneShadowForm</value>
+  </data>
+  <data name="&gt;&gt;siticoneControlBox1.Name" xml:space="preserve">
+    <value>siticoneControlBox1</value>
+  </data>
+  <data name="&gt;&gt;LoginBtn.Type" xml:space="preserve">
+    <value>Siticone.UI.WinForms.SiticoneRoundedButton, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 23</value>
+  </data>
+  <data name="&gt;&gt;password.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 363</value>
+  </data>
+  <data name="&gt;&gt;siticoneDragControl1.Type" xml:space="preserve">
+    <value>Siticone.UI.WinForms.SiticoneDragControl, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="status.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;username.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;siticoneControlBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;key.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="siticoneRoundedButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 335</value>
+  </data>
+  <data name="status.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;username.Name" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="&gt;&gt;password.Type" xml:space="preserve">
+    <value>Siticone.UI.WinForms.SiticoneRoundedTextBox, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
+  </data>
+  <data name="siticoneControlBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="LoginBtn.Text" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="status.Text" xml:space="preserve">
+    <value>Status: Awaiting login</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RgstrBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 33</value>
+  </data>
+  <data name="&gt;&gt;LoginBtn.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="key.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 37</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="siticoneControlBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="username.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 71</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="siticoneControlBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 36</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="status.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RgstrBtn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="siticoneControlBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 5</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;key.Name" xml:space="preserve">
+    <value>key</value>
+  </data>
+  <data name="status.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="RgstrBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 291</value>
+  </data>
+  <data name="&gt;&gt;status.Name" xml:space="preserve">
+    <value>status</value>
+  </data>
+  <data name="&gt;&gt;password.Name" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="status.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt, style=Bold</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="username.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 99</value>
-  </data>
-  <data name="siticoneControlBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="siticoneRoundedButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 335</value>
-  </data>
-  <data name="siticoneControlBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;siticoneControlBox1.Type" xml:space="preserve">
-    <value>Siticone.UI.WinForms.SiticoneControlBox, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
-  </data>
-  <data name="siticoneControlBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;password.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="LoginBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 33</value>
-  </data>
-  <data name="&gt;&gt;RgstrBtn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 71</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="&gt;&gt;status.Type" xml:space="preserve">
-    <value>Siticone.UI.WinForms.SiticoneLabel, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Key</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;status.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Password</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 363</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 10.2pt, style=Bold</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>443, 431</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;RgstrBtn.Type" xml:space="preserve">
-    <value>Siticone.UI.WinForms.SiticoneRoundedButton, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
   </data>
-  <data name="&gt;&gt;siticoneDragControl1.Name" xml:space="preserve">
-    <value>siticoneDragControl1</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Panel Warn Login</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="status.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
   </data>
-  <data name="&gt;&gt;password.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 23</value>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 155</value>
   </data>
-  <data name="&gt;&gt;siticoneControlBox2.Type" xml:space="preserve">
-    <value>Siticone.UI.WinForms.SiticoneControlBox, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;status.Name" xml:space="preserve">
-    <value>status</value>
-  </data>
-  <data name="status.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="&gt;&gt;status.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="RgstrBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 33</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
+  <data name="password.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
   </data>
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
@@ -339,271 +486,124 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="LoginBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="RgstrBtn.Text" xml:space="preserve">
     <value>Register</value>
   </data>
-  <data name="&gt;&gt;password.Type" xml:space="preserve">
-    <value>Siticone.UI.WinForms.SiticoneRoundedTextBox, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
-  </data>
-  <data name="password.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="siticoneControlBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 5</value>
-  </data>
-  <data name="status.Size" type="System.Drawing.Size, System.Drawing">
-    <value>443, 52</value>
-  </data>
-  <data name="&gt;&gt;key.Type" xml:space="preserve">
-    <value>Siticone.UI.WinForms.SiticoneRoundedTextBox, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
-  </data>
-  <data name="siticoneControlBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;LoginBtn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="password.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;LoginBtn.Name" xml:space="preserve">
-    <value>LoginBtn</value>
-  </data>
-  <data name="&gt;&gt;siticoneControlBox2.Name" xml:space="preserve">
-    <value>siticoneControlBox2</value>
-  </data>
-  <data name="&gt;&gt;password.Name" xml:space="preserve">
-    <value>password</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 155</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="password.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 37</value>
-  </data>
-  <data name="status.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="password.Location" type="System.Drawing.Point, System.Drawing">
-    <value>64, 146</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 23</value>
-  </data>
-  <data name="&gt;&gt;username.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;siticoneControlBox1.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;siticoneShadowForm.Name" xml:space="preserve">
-    <value>siticoneShadowForm</value>
-  </data>
-  <data name="&gt;&gt;username.Name" xml:space="preserve">
-    <value>username</value>
-  </data>
-  <data name="&gt;&gt;siticoneControlBox2.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="username.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;siticoneRoundedButton1.Type" xml:space="preserve">
-    <value>Siticone.UI.WinForms.SiticoneRoundedButton, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="key.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 155</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 14</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RgstrBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 291</value>
-  </data>
-  <data name="&gt;&gt;key.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;siticoneRoundedButton1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;siticoneRoundedButton1.Name" xml:space="preserve">
-    <value>siticoneRoundedButton1</value>
+  <data name="&gt;&gt;key.Type" xml:space="preserve">
+    <value>Siticone.UI.WinForms.SiticoneRoundedTextBox, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
   </data>
   <data name="siticoneRoundedButton1.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
   </data>
-  <data name="status.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
+  <data name="&gt;&gt;siticoneShadowForm.Type" xml:space="preserve">
+    <value>Siticone.UI.WinForms.SiticoneShadowForm, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
   </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="key.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 37</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Panel Warn Login</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="status.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="username.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="RgstrBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;RgstrBtn.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="RgstrBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
   </data>
-  <data name="status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 379</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Light, 10pt</value>
-  </data>
-  <data name="&gt;&gt;username.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>113</value>
-  </data>
-  <data name="LoginBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 291</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 45</value>
-  </data>
-  <data name="&gt;&gt;key.Name" xml:space="preserve">
-    <value>key</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <data name="&gt;&gt;RgstrBtn.Name" xml:space="preserve">
-    <value>RgstrBtn</value>
-  </data>
-  <data name="LoginBtn.Text" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="key.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="LoginBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
   </data>
-  <data name="RgstrBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
+  <data name="&gt;&gt;siticoneRoundedButton1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="siticoneControlBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 36</value>
+  <data name="LoginBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 33</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 14</value>
   </data>
   <data name="&gt;&gt;username.Type" xml:space="preserve">
     <value>Siticone.UI.WinForms.SiticoneRoundedTextBox, Siticone.UI, Version=1.0.0.3, Culture=neutral, PublicKeyToken=da23b5286e22db85</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>443, 431</value>
   </data>
-  <metadata name="siticoneDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <data name="key.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="password.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Light, 10pt</value>
+  </data>
+  <data name="key.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 45</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="siticoneControlBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="siticoneControlBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="siticoneControlBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="siticoneControlBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 5</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="LoginBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="status.Size" type="System.Drawing.Size, System.Drawing">
+    <value>443, 52</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 235</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 37</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>fr</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>fr</value>
-  </metadata>
   <metadata name="siticoneShadowForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>242, 23</value>
+  </metadata>
+  <metadata name="siticoneDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

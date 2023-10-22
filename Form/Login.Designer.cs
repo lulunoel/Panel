@@ -56,6 +56,7 @@ namespace KeyAuth
             this.siticoneControlBox1.IconColor = System.Drawing.Color.White;
             this.siticoneControlBox1.Name = "siticoneControlBox1";
             this.siticoneControlBox1.ShadowDecoration.Parent = this.siticoneControlBox1;
+            this.siticoneControlBox1.Click += new System.EventHandler(this.siticoneControlBox1_Click);
             // 
             // siticoneControlBox2
             // 

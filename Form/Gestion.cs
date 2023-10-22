@@ -7,17 +7,13 @@ using Newtonsoft.Json.Linq;
 using RestSharp;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
 using static KeyAuth.Warn;
-using static Loader.Gestion;
 
 namespace Loader
 {
@@ -341,6 +337,13 @@ namespace Loader
             timer.Elapsed += TimerElapsed;
             timer.AutoReset = true; // Définir AutoReset à true pour que le minuteur se répète
             timer.Start();
+            this.FormClosing += Form_Closing;
+        }
+
+        private void Form_Closing(object sender, FormClosingEventArgs e)
+        {
+            // Annuler la fermeture
+            e.Cancel = true;
         }
 
         private void SendTimer_Elapsed(object sender, ElapsedEventArgs e)
@@ -470,6 +473,7 @@ namespace Loader
             await Task.Delay(TimeSpan.FromSeconds(1));
 
             Environment.Exit(0); // Quittez l'application après le délai
+            this.Close(); // Cela déclenchera à nouveau l'événement Form_Closing
         }
 
         private void siticoneRoundedButton3_Click(object sender, EventArgs e)
@@ -516,6 +520,8 @@ namespace Loader
             await Task.Delay(TimeSpan.FromSeconds(1));
 
             Environment.Exit(0); // Quittez l'application après le délai
+            this.Close(); // Cela déclenchera à nouveau l'événement Form_Closing
+
         }
 
         private void button2_Click(object sender, EventArgs e)

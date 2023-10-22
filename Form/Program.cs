@@ -13,7 +13,6 @@ namespace KeyAuth
         /// </summary>
         [STAThread]
 
-
         static void Main()
         {
             Application.EnableVisualStyles();
