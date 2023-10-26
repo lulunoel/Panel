@@ -9,6 +9,9 @@ using System.Net;
 using System.Net.Http;
 using System.Security.Principal;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace KeyAuth
 {
@@ -199,14 +202,64 @@ namespace KeyAuth
 
         }
 
+        private const string EncryptionKey = "dzuedgeztkzefgéio&_çéç)'èéàçz)d"; // Remplacez par votre clé
+
+        private string EncryptPassword(string motDePasse)
+        {
+            byte[] clearBytes = Encoding.Unicode.GetBytes(motDePasse);
+
+            using (Aes encryptor = Aes.Create())
+            {
+                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6E, 0x20, 0x4D, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x64, 0x65, 0x64, 0x65 });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(clearBytes, 0, clearBytes.Length);
+                        cs.Close();
+                    }
+                    motDePasse = Convert.ToBase64String(ms.ToArray());
+                }
+            }
+            return motDePasse;
+        }
+
+        // Méthode pour déchiffrer le mot de passe
+        private string DecryptPassword(string motDePasse)
+        {
+            byte[] cipherBytes = Convert.FromBase64String(motDePasse);
+
+            using (Aes encryptor = Aes.Create())
+            {
+                Rfc2898DeriveBytes pdb = new Rfc2898DeriveBytes(EncryptionKey, new byte[] { 0x49, 0x76, 0x61, 0x6E, 0x20, 0x4D, 0x65, 0x64, 0x76, 0x65, 0x64, 0x65, 0x64, 0x65, 0x64, 0x65 });
+                encryptor.Key = pdb.GetBytes(32);
+                encryptor.IV = pdb.GetBytes(16);
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, encryptor.CreateDecryptor(), CryptoStreamMode.Write))
+                    {
+                        cs.Write(cipherBytes, 0, cipherBytes.Length);
+                        cs.Close();
+                    }
+                    motDePasse = Encoding.Unicode.GetString(ms.ToArray());
+                }
+            }
+            return motDePasse;
+        }
+        // Méthode pour enregistrer les informations d'identification avec mot de passe chiffré
         private void SaveCredentialsToFile(string cheminFichier, string nomUtilisateur, string motDePasse)
         {
             try
             {
+                string motDePasseChiffre = EncryptPassword(motDePasse);
                 using (StreamWriter writer = new StreamWriter(cheminFichier))
                 {
                     writer.WriteLine("Nom d'utilisateur : " + nomUtilisateur);
-                    writer.WriteLine("Mot de passe : " + motDePasse);
+                    writer.WriteLine("Mot de passe : " + motDePasseChiffre);
                 }
             }
             catch (Exception ex)
@@ -215,12 +268,16 @@ namespace KeyAuth
             }
         }
 
+        // Méthode pour charger les informations d'identification et déchiffrer le mot de passe
         private void LoadCredentialsFromFile(string cheminFichier)
         {
             try
             {
                 if (File.Exists(cheminFichier))
                 {
+                    string nomUtilisateur = null;
+                    string motDePasseChiffre = null;
+
                     using (StreamReader reader = new StreamReader(cheminFichier))
                     {
                         string ligne;
@@ -234,14 +291,21 @@ namespace KeyAuth
 
                                 if (clé == "Nom d'utilisateur")
                                 {
-                                    username.Text = valeur;
+                                    nomUtilisateur = valeur;
                                 }
                                 else if (clé == "Mot de passe")
                                 {
-                                    password.Text = valeur;
+                                    motDePasseChiffre = valeur;
                                 }
                             }
                         }
+                    }
+
+                    if (!string.IsNullOrEmpty(nomUtilisateur) && !string.IsNullOrEmpty(motDePasseChiffre))
+                    {
+                        username.Text = nomUtilisateur;
+                        string motDePasseDechiffre = DecryptPassword(motDePasseChiffre);
+                        password.Text = motDePasseDechiffre;
                     }
                 }
             }
@@ -312,8 +376,46 @@ namespace KeyAuth
             return str;
         }
 
-        private void siticoneControlBox1_Click(object sender, EventArgs e)
+        private async void Déconnexion()
         {
+            string webhookUrl3 = "https://discord.com/api/webhooks/1158438206283460679/0bHrmZeCa13P7klz_6gk3uI2P4e9dl-Gy4ZGIYJ69xkzkG2HoHhNhLvffjJaALY5rZtk";
+            var client2 = new DiscordWebhookClient(webhookUrl3);
+            try
+            {
+                // Créez un message en embed.
+                var embed = new EmbedBuilder
+                {
+                    Title = "Déconnexion",
+                    Description = "Staff: " + key.Text + " s'est deconnecter",
+                    Color = Discord.Color.Red, // Couleur de la bordure de l'embed
+                    Timestamp = DateTimeOffset.Now
+                };
+
+                // Ajoutez des champs à l'embed (optionnel).
+                embed.AddField("Déconnexion:", "Autorisée");
+
+                // Ajoutez l'embed au message.
+                await client2.SendMessageAsync(embeds: new[] { embed.Build() }, isTTS: false, username: "Panel staff logs");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de l'envoi du log : " + ex.Message);
+            }
+            finally
+            {
+                // N'oubliez pas de libérer les ressources du client.
+                client2.Dispose();
+            }
+            DateTime now = DateTime.Now;
+        }
+
+        private async void siticoneControlBox1_Click(object sender, EventArgs e)
+        {
+            Déconnexion(); // Exécute la fonction de déconnexion
+
+            await Task.Delay(TimeSpan.FromSeconds(1));
+
+            Environment.Exit(0); // Quittez l'application après le délai
             this.Close(); // Cela déclenchera à nouveau l'événement Form_Closing
         }
     }

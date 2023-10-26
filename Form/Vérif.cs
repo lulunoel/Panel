@@ -309,26 +309,6 @@ namespace Loader
                 // N'oubliez pas de libérer les ressources du client.
                 client2.Dispose();
             }
-            DateTime now = DateTime.Now;
-            string formattedDate = now.ToString("dd-MM-yyyy HH:mm:ss");
-
-            string pseudo = key.Text;
-            string action = "Déconnexion";
-            string date = formattedDate;
-
-            string editer = "INSERT INTO `Logs`(`Pseudo`, `Action`, `Date`) VALUES (@Pseudo, @Action, @Date)";
-
-            using (MySqlConnection connection = Conect())
-            {
-                using (MySqlCommand comando = new MySqlCommand(editer, connection))
-                {
-                    comando.Parameters.AddWithValue("@Pseudo", pseudo);
-                    comando.Parameters.AddWithValue("@Action", action);
-                    comando.Parameters.AddWithValue("@Date", date);
-
-                    comando.ExecuteNonQuery();
-                }
-            }
         }
 
         public MySqlConnection Conect()

@@ -70,8 +70,6 @@ namespace KeyAuth
             this.label17 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.siticoneRoundedButton10 = new Siticone.UI.WinForms.SiticoneRoundedButton();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -300,6 +298,7 @@ namespace KeyAuth
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged_1);
             // 
             // Id
             // 
@@ -604,18 +603,6 @@ namespace KeyAuth
             this.siticoneRoundedButton10.ShadowDecoration.Parent = this.siticoneRoundedButton10;
             this.siticoneRoundedButton10.Click += new System.EventHandler(this.siticoneRoundedButton10_Click);
             // 
-            // label25
-            // 
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label25.Name = "label25";
-            // 
-            // label26
-            // 
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label26.Name = "label26";
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(127)))), ((int)(((byte)(243)))));
@@ -754,8 +741,6 @@ namespace KeyAuth
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.label26);
             this.Controls.Add(this.siticoneRoundedButton10);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label20);
@@ -870,8 +855,6 @@ namespace KeyAuth
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label20;
         private Siticone.UI.WinForms.SiticoneRoundedButton siticoneRoundedButton10;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button1;

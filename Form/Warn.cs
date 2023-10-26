@@ -26,6 +26,9 @@ namespace KeyAuth
         private Point dragFormPoint;
         private readonly MySqlConnection connection = new MySqlConnection("database=s2_test; server=83.150.217.78; user id=pterodactyl; pwd=4wYYZkQ6nccgvbZR4LgK");
 
+        private ContextMenuStrip contextMenu;
+
+
         public Warn()
         {
             InitializeComponent();
@@ -34,19 +37,12 @@ namespace KeyAuth
             this.MouseMove += Form1_MouseMove;
             this.MouseUp += Form1_MouseUp;
             Application.EnableVisualStyles();
-            // Enregistrez l'heure de démarrage de l'application
-            startTime = DateTime.Now;
 
-            // Créez et configurez le Timer
-            timer1 = new System.Windows.Forms.Timer
+            contextMenu = new ContextMenuStrip
             {
-                Interval = 1000 // Mettez à jour toutes les 1000 millisecondes (1 seconde)
-            };
-            timer1.Tick += Timer_Tick;
-            timer1.Start(); // Démarrez le Timer
-
-            // Appelez la mise à jour initiale
-            UpdateElapsedTime();
+                BackColor = System.Drawing.Color.FromArgb(35, 39, 42),
+                ShowImageMargin = false
+            }; 
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
@@ -160,8 +156,6 @@ namespace KeyAuth
         }
         private async void Main_Load(object sender, EventArgs e)
         {
-
-
             key.Text = Login.KeyAuthApp.user_data.username;
             DateTime dateSelectionnee = Datedederniéreédition.Value;
 
@@ -257,6 +251,23 @@ namespace KeyAuth
                 button5.Enabled = false;
 
             }
+            if (label14.Text == "SuperModo" || label14.Text == "Manager" || label14.Text == "Admin" || label14.Text == "Gérant")
+            {
+                ToolStripMenuItem menuItem1 = new ToolStripMenuItem("Delete le warn");
+                ToolStripMenuItem menuItem2 = new ToolStripMenuItem("Retirer le warn");
+                menuItem1.ForeColor = System.Drawing.Color.White;
+                menuItem2.ForeColor = System.Drawing.Color.White;
+
+                menuItem1.Click += deleteLeWarnToolStripMenuItem_Click;
+                menuItem2.Click += retirerLeWarnToolStripMenuItem_Click;
+
+                contextMenu.Items.Add(menuItem1);
+                contextMenu.Items.Add(menuItem2);
+
+                // Associez le ContextMenuStrip au DataGridView une seule fois
+                dataGridView1.ContextMenuStrip = contextMenu;
+            }
+
             // Initialisation du Timer pour envoyer key.Text à la base de données toutes les 5 minutes.
             System.Timers.Timer timer2 = new System.Timers.Timer(300000);
             timer2.Elapsed += SendTimer_Elapsed;
@@ -514,26 +525,6 @@ namespace KeyAuth
             {
                 // N'oubliez pas de libérer les ressources du client.
                 client2.Dispose();
-            }
-            DateTime now = DateTime.Now;
-            string formattedDate = now.ToString("dd-MM-yyyy HH:mm:ss");
-
-            string pseudo = key.Text;
-            string action = "Déconnexion";
-            string date = formattedDate;
-
-            string editer = "INSERT INTO `Logs`(`Pseudo`, `Action`, `Date`) VALUES (@Pseudo, @Action, @Date)";
-
-            using (MySqlConnection connection = Conect())
-            {
-                using (MySqlCommand comando = new MySqlCommand(editer, connection))
-                {
-                    comando.Parameters.AddWithValue("@Pseudo", pseudo);
-                    comando.Parameters.AddWithValue("@Action", action);
-                    comando.Parameters.AddWithValue("@Date", date);
-
-                    comando.ExecuteNonQuery();
-                }
             }
         }
 
@@ -1048,22 +1039,6 @@ namespace KeyAuth
             Retirerwarn();
             ActualizarDataGridView();
         }
-        private readonly DateTime startTime;
-
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            // À chaque tick du Timer, mettez à jour le temps écoulé
-            UpdateElapsedTime();
-        }
-
-        private void UpdateElapsedTime()
-        {
-            // Calculez la durée écoulée depuis le démarrage de l'application
-            TimeSpan elapsedTime = DateTime.Now - startTime;
-
-            // Mettez à jour le texte du Label avec le temps écoulé
-            label26.Text = $"{elapsedTime.Hours:D2}:{elapsedTime.Minutes:D2}:{elapsedTime.Seconds:D2}";
-        }
 
         private void siticoneRoundedButton12_Click(object sender, EventArgs e)
         {
@@ -1105,23 +1080,36 @@ namespace KeyAuth
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Récupérez la valeur de l'ID à partir de la ligne sélectionnée
-                string idToDelete = dataGridView1.SelectedRows[0].Cells["Id"].Value.ToString();
-
-                // Construisez la requête de suppression
-                string retirer = "DELETE FROM Warns WHERE Id ='" + idToDelete + "';";
-
-                // Exécutez la requête de suppression
-                MySqlCommand comando = new MySqlCommand(retirer)
+                if (!string.IsNullOrEmpty(siticoneRoundedTextBox3.Text))
                 {
-                    Connection = Conect()
-                };
-                comando.ExecuteNonQuery();
-                comando.Connection.Close();
-                Removearn();
+                    // Récupérez la valeur de l'ID à partir de la ligne sélectionnée
+                    string idToDelete = dataGridView1.SelectedRows[0].Cells["Id"].Value.ToString();
 
-                // Mettez à jour la DataGridView après la suppression
-                ActualizarDataGridView();
+                    // Construisez la requête de suppression
+                    string retirer = "DELETE FROM Warns WHERE Id ='" + idToDelete + "';";
+
+                    // Exécutez la requête de suppression
+                    MySqlCommand comando = new MySqlCommand(retirer)
+                    {
+                        Connection = Conect()
+                    };
+                    comando.ExecuteNonQuery();
+                    comando.Connection.Close();
+                    Removearn();
+
+                    siticoneRoundedTextBox3.Text = "";
+                    label23.Text = "";
+                    label22.Text = "";
+                    label24.Text = "";
+                    label17.Text = "";
+
+                    // Mettez à jour la DataGridView après la suppression
+                    ActualizarDataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("La TextBox est vide. Veuillez sélectionner une ligne et remplir la TextBox.", "TextBox vide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
@@ -1135,45 +1123,59 @@ namespace KeyAuth
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Récupérez la valeur de l'ID à partir de la ligne sélectionnée
-                string idToRemove = dataGridView1.SelectedRows[0].Cells["Id"].Value.ToString();
-
-                // Construisez la requête de suppression
-                string retirer = "DELETE FROM Warns WHERE Id ='" + idToRemove + "';";
-
-                // Exécutez la requête de suppression
-                MySqlCommand comando = new MySqlCommand(retirer)
+                if (!string.IsNullOrEmpty(siticoneRoundedTextBox3.Text))
                 {
-                    Connection = Conect()
-                };
-                comando.ExecuteNonQuery();
-                comando.Connection.Close();
+                    // Récupérez la valeur de l'ID à partir de la ligne sélectionnée
+                    string idToRemove = dataGridView1.SelectedRows[0].Cells["Id"].Value.ToString();
 
-                // Créez un nouvel enregistrement avec les mêmes valeurs que celui que vous avez supprimé
-                warns warns = new warns
+                    // Construisez la requête de suppression
+                    string retirer = "DELETE FROM Warns WHERE Id ='" + idToRemove + "';";
+
+                    // Exécutez la requête de suppression
+                    MySqlCommand comando = new MySqlCommand(retirer)
+                    {
+                        Connection = Conect()
+                    };
+                    comando.ExecuteNonQuery();
+                    comando.Connection.Close();
+
+                    // Créez un nouvel enregistrement avec les mêmes valeurs que celui que vous avez supprimé
+                    warns warns = new warns
+                    {
+                        PseudoJoueur = label23.Text,
+                        RaisonWarn = label24.Text,
+                        PseudoStaff = label22.Text,
+                        Datedederniereedition = "2001/01/01",
+                        Datedefin = "2001/01/01",
+                        Statue = "Inactif ❌"
+                    };
+
+                    // Construisez la requête d'insertion
+                    string agregar = "INSERT INTO Warns (PseudoJoueur, RaisonWarn, PseudoStaff, Datedederniéreédition, Datedefin, Statue) VALUES ('"
+                        + warns.PseudoJoueur + "', '" + warns.RaisonWarn + "', '" + warns.PseudoStaff + "', '" + warns.Datedederniereedition + "', '" + warns.Datedefin + "', '" + warns.Statue + "');";
+
+                    // Exécutez la requête d'insertion
+                    MySqlCommand comando2 = new MySqlCommand(agregar)
+                    {
+                        Connection = Conect()
+                    };
+                    comando2.ExecuteNonQuery();
+                    comando2.Connection.Close();
+                    Retirerwarn();
+
+                    siticoneRoundedTextBox3.Text = "";
+                    label23.Text = "";
+                    label22.Text = "";
+                    label24.Text = "";
+                    label17.Text = "";
+                    // Mettez à jour la DataGridView après les opérations
+                    ActualizarDataGridView();
+                }
+                else
                 {
-                    PseudoJoueur = label23.Text,
-                    RaisonWarn = label24.Text,
-                    PseudoStaff = label22.Text,
-                    Datedederniereedition = "2001/01/01",
-                    Datedefin = "2001/01/01",
-                    Statue = "Inactif ❌"
-                };
-
-                // Construisez la requête d'insertion
-                string agregar = "INSERT INTO Warns (PseudoJoueur, RaisonWarn, PseudoStaff, Datedederniéreédition, Datedefin, Statue) VALUES ('"
-                    + warns.PseudoJoueur + "', '" + warns.RaisonWarn + "', '" + warns.PseudoStaff + "', '" + warns.Datedederniereedition + "', '" + warns.Datedefin + "', '" + warns.Statue + "');";
-
-                // Exécutez la requête d'insertion
-                MySqlCommand comando2 = new MySqlCommand(agregar)
-                {
-                    Connection = Conect()
-                };
-                comando2.ExecuteNonQuery();
-                comando2.Connection.Close();
-                Retirerwarn();
-                // Mettez à jour la DataGridView après les opérations
-                ActualizarDataGridView();
+                    // Gérer le cas où la TextBox est vide
+                    MessageBox.Show("La TextBox est vide. Veuillez sélectionner une ligne et remplir la TextBox.", "TextBox vide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
@@ -1181,6 +1183,7 @@ namespace KeyAuth
                 MessageBox.Show("Sélectionnez une ligne à retirer.", "Aucune ligne sélectionnée", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
 
         private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
@@ -1289,89 +1292,34 @@ namespace KeyAuth
             this.Hide();
         }
 
-
-        private async void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Vérifie si un clic a eu lieu sur une ligne valide
+            UpdateLabelsFromSelectedRow();
+        }
+
+        private void UpdateLabelsFromSelectedRow()
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                if (label14.Text == " " || label14.Text == "Modo" || label14.Text == "Guide")
-                {
-                    // Accédez aux valeurs des cellules dans la ligne sélectionnée
-                    string id = dataGridView1.Rows[e.RowIndex].Cells["Id"].Value.ToString();
-                    string pseudo = dataGridView1.Rows[e.RowIndex].Cells["PseudoJoueur"].Value.ToString();
-                    string raison = dataGridView1.Rows[e.RowIndex].Cells["RaisonWarn"].Value.ToString();
-                    string pseudostaff = dataGridView1.Rows[e.RowIndex].Cells["PseudoStaff"].Value.ToString();
-                    string datedederniereedition = dataGridView1.Rows[e.RowIndex].Cells["Datedederniereedition"].Value.ToString();
-                    string datedefin = dataGridView1.Rows[e.RowIndex].Cells["Date_de_fin"].Value.ToString();
-                    string statut = dataGridView1.Rows[e.RowIndex].Cells["Statue"].Value.ToString();
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
-                    // Affectez chaque élément à des contrôles différents
-                    siticoneRoundedTextBox3.Text = id;
-                    label23.Text = pseudo;
-                    label22.Text = raison;
-                    label24.Text = pseudostaff;
-                    label17.Text = statut;
+                string id = selectedRow.Cells["Id"].Value.ToString();
+                string pseudo = selectedRow.Cells["PseudoJoueur"].Value.ToString();
+                string raison = selectedRow.Cells["RaisonWarn"].Value.ToString();
+                string pseudostaff = selectedRow.Cells["PseudoStaff"].Value.ToString();
+                string statut = selectedRow.Cells["Statue"].Value.ToString();
 
-                    string playerName = label23.Text;
-                    string playerUUID = await GetPlayerUUID(playerName);
-
-                    if (!string.IsNullOrEmpty(playerUUID))
-                    {
-                        GetMinecraftHead(playerUUID);
-                    }
-                }
-                else
-                {
-                    // Accédez aux valeurs des cellules dans la ligne sélectionnée
-                    string id = dataGridView1.Rows[e.RowIndex].Cells["Id"].Value.ToString();
-                    string pseudo = dataGridView1.Rows[e.RowIndex].Cells["PseudoJoueur"].Value.ToString();
-                    string raison = dataGridView1.Rows[e.RowIndex].Cells["RaisonWarn"].Value.ToString();
-                    string pseudostaff = dataGridView1.Rows[e.RowIndex].Cells["PseudoStaff"].Value.ToString();
-                    string datedederniereedition = dataGridView1.Rows[e.RowIndex].Cells["Datedederniereedition"].Value.ToString();
-                    string datedefin = dataGridView1.Rows[e.RowIndex].Cells["Date_de_fin"].Value.ToString();
-                    string statut = dataGridView1.Rows[e.RowIndex].Cells["Statue"].Value.ToString();
-
-                    // Affectez chaque élément à des contrôles différents
-                    siticoneRoundedTextBox3.Text = id;
-                    label23.Text = pseudo;
-                    label24.Text = raison;
-                    label22.Text = pseudostaff;
-                    label17.Text = statut;
-
-                    string playerName = label23.Text;
-                    string playerUUID = await GetPlayerUUID(playerName);
-
-                    if (!string.IsNullOrEmpty(playerUUID))
-                    {
-                        GetMinecraftHead(playerUUID);
-                    }
-                    ContextMenuStrip contextMenu = new ContextMenuStrip
-                    {
-
-                        // Change la couleur de fond en utilisant les composants R, G, B
-                        BackColor = System.Drawing.Color.FromArgb(35, 39, 42),
-                        ShowImageMargin = false
-                    };
-
-                    ToolStripMenuItem menuItem1 = new ToolStripMenuItem("Delete le warn");
-                    ToolStripMenuItem menuItem2 = new ToolStripMenuItem("Retirer le warn");
-
-                    // Change la couleur du texte en rouge pour "Option 1"
-                    menuItem1.ForeColor = System.Drawing.Color.White;
-                    menuItem2.ForeColor = System.Drawing.Color.White;
-
-                    // Associez des gestionnaires d'événements aux éléments de menu si nécessaire
-                    menuItem1.Click += deleteLeWarnToolStripMenuItem_Click;
-                    menuItem2.Click += retirerLeWarnToolStripMenuItem_Click;
-
-                    // Ajoutez les éléments de menu au ContextMenuStrip
-                    contextMenu.Items.Add(menuItem1);
-                    contextMenu.Items.Add(menuItem2);
-
-                    // Associez le ContextMenuStrip au DataGridView
-                    dataGridView1.ContextMenuStrip = contextMenu;
-                }
+                siticoneRoundedTextBox3.Text = id;
+                label23.Text = pseudo;
+                label22.Text = raison;
+                label24.Text = pseudostaff;
+                label17.Text = statut;
             }
+        }
+
+        private void dataGridView1_SelectionChanged_1(object sender, EventArgs e)
+        {
+            UpdateLabelsFromSelectedRow();
         }
     }
 }
