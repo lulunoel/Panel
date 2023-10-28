@@ -72,6 +72,7 @@
             this.siticoneRoundedButton5 = new Siticone.UI.WinForms.SiticoneRoundedButton();
             this.siticoneRoundedButton7 = new Siticone.UI.WinForms.SiticoneRoundedButton();
             this.siticoneRoundedButton8 = new Siticone.UI.WinForms.SiticoneRoundedButton();
+            this.siticoneRoundedButton9 = new Siticone.UI.WinForms.SiticoneRoundedButton();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,7 +113,7 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button4
             // 
@@ -134,6 +135,7 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button1
             // 
@@ -155,7 +157,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -177,7 +179,7 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // btnTools
             // 
@@ -199,7 +201,7 @@
             this.btnTools.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTools.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTools.UseVisualStyleBackColor = true;
-            this.btnTools.Click += new System.EventHandler(this.btnTools_Click);
+            this.btnTools.Click += new System.EventHandler(this.BtnTools_Click);
             // 
             // siticoneRoundedButton6
             // 
@@ -403,14 +405,14 @@
             this.siticoneRoundedButton3.ForeColor = System.Drawing.Color.White;
             this.siticoneRoundedButton3.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.siticoneRoundedButton3.HoveredState.Parent = this.siticoneRoundedButton3;
-            this.siticoneRoundedButton3.Location = new System.Drawing.Point(780, 266);
+            this.siticoneRoundedButton3.Location = new System.Drawing.Point(780, 197);
             this.siticoneRoundedButton3.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneRoundedButton3.Name = "siticoneRoundedButton3";
             this.siticoneRoundedButton3.ShadowDecoration.Parent = this.siticoneRoundedButton3;
             this.siticoneRoundedButton3.Size = new System.Drawing.Size(291, 33);
             this.siticoneRoundedButton3.TabIndex = 177;
             this.siticoneRoundedButton3.Text = "Changer l\'email";
-            this.siticoneRoundedButton3.Click += new System.EventHandler(this.siticoneRoundedButton3_Click);
+            this.siticoneRoundedButton3.Click += new System.EventHandler(this.SiticoneRoundedButton3_Click);
             // 
             // siticoneRoundedTextBox3
             // 
@@ -428,7 +430,7 @@
             this.siticoneRoundedTextBox3.FocusedState.Parent = this.siticoneRoundedTextBox3;
             this.siticoneRoundedTextBox3.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.siticoneRoundedTextBox3.HoveredState.Parent = this.siticoneRoundedTextBox3;
-            this.siticoneRoundedTextBox3.Location = new System.Drawing.Point(780, 231);
+            this.siticoneRoundedTextBox3.Location = new System.Drawing.Point(780, 162);
             this.siticoneRoundedTextBox3.Margin = new System.Windows.Forms.Padding(5);
             this.siticoneRoundedTextBox3.Name = "siticoneRoundedTextBox3";
             this.siticoneRoundedTextBox3.PasswordChar = '\0';
@@ -450,14 +452,14 @@
             this.siticoneRoundedButton1.ForeColor = System.Drawing.Color.White;
             this.siticoneRoundedButton1.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.siticoneRoundedButton1.HoveredState.Parent = this.siticoneRoundedButton1;
-            this.siticoneRoundedButton1.Location = new System.Drawing.Point(1107, 266);
+            this.siticoneRoundedButton1.Location = new System.Drawing.Point(1107, 197);
             this.siticoneRoundedButton1.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneRoundedButton1.Name = "siticoneRoundedButton1";
             this.siticoneRoundedButton1.ShadowDecoration.Parent = this.siticoneRoundedButton1;
             this.siticoneRoundedButton1.Size = new System.Drawing.Size(207, 33);
             this.siticoneRoundedButton1.TabIndex = 179;
             this.siticoneRoundedButton1.Text = "Changer pseudo";
-            this.siticoneRoundedButton1.Click += new System.EventHandler(this.siticoneRoundedButton1_Click);
+            this.siticoneRoundedButton1.Click += new System.EventHandler(this.SiticoneRoundedButton1_Click);
             // 
             // siticoneRoundedTextBox1
             // 
@@ -475,7 +477,7 @@
             this.siticoneRoundedTextBox1.FocusedState.Parent = this.siticoneRoundedTextBox1;
             this.siticoneRoundedTextBox1.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.siticoneRoundedTextBox1.HoveredState.Parent = this.siticoneRoundedTextBox1;
-            this.siticoneRoundedTextBox1.Location = new System.Drawing.Point(1107, 231);
+            this.siticoneRoundedTextBox1.Location = new System.Drawing.Point(1107, 162);
             this.siticoneRoundedTextBox1.Margin = new System.Windows.Forms.Padding(5);
             this.siticoneRoundedTextBox1.Name = "siticoneRoundedTextBox1";
             this.siticoneRoundedTextBox1.PasswordChar = '\0';
@@ -492,7 +494,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label11.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label11.Location = new System.Drawing.Point(860, 203);
+            this.label11.Location = new System.Drawing.Point(860, 134);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(124, 23);
             this.label11.TabIndex = 180;
@@ -504,7 +506,7 @@
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label12.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label12.Location = new System.Drawing.Point(1140, 203);
+            this.label12.Location = new System.Drawing.Point(1140, 134);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(141, 23);
             this.label12.TabIndex = 181;
@@ -516,7 +518,7 @@
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label13.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.label13.Location = new System.Drawing.Point(902, 334);
+            this.label13.Location = new System.Drawing.Point(902, 265);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(51, 23);
             this.label13.TabIndex = 184;
@@ -533,14 +535,14 @@
             this.siticoneRoundedButton2.ForeColor = System.Drawing.Color.White;
             this.siticoneRoundedButton2.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.siticoneRoundedButton2.HoveredState.Parent = this.siticoneRoundedButton2;
-            this.siticoneRoundedButton2.Location = new System.Drawing.Point(780, 398);
+            this.siticoneRoundedButton2.Location = new System.Drawing.Point(780, 329);
             this.siticoneRoundedButton2.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneRoundedButton2.Name = "siticoneRoundedButton2";
             this.siticoneRoundedButton2.ShadowDecoration.Parent = this.siticoneRoundedButton2;
             this.siticoneRoundedButton2.Size = new System.Drawing.Size(291, 33);
             this.siticoneRoundedButton2.TabIndex = 183;
             this.siticoneRoundedButton2.Text = "Changer mots de passe";
-            this.siticoneRoundedButton2.Click += new System.EventHandler(this.siticoneRoundedButton2_Click);
+            this.siticoneRoundedButton2.Click += new System.EventHandler(this.SiticoneRoundedButton2_Click);
             // 
             // siticoneRoundedTextBox2
             // 
@@ -558,7 +560,7 @@
             this.siticoneRoundedTextBox2.FocusedState.Parent = this.siticoneRoundedTextBox2;
             this.siticoneRoundedTextBox2.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.siticoneRoundedTextBox2.HoveredState.Parent = this.siticoneRoundedTextBox2;
-            this.siticoneRoundedTextBox2.Location = new System.Drawing.Point(780, 362);
+            this.siticoneRoundedTextBox2.Location = new System.Drawing.Point(780, 293);
             this.siticoneRoundedTextBox2.Margin = new System.Windows.Forms.Padding(5);
             this.siticoneRoundedTextBox2.Name = "siticoneRoundedTextBox2";
             this.siticoneRoundedTextBox2.PasswordChar = '\0';
@@ -588,14 +590,14 @@
             this.siticoneRoundedButton4.ForeColor = System.Drawing.Color.White;
             this.siticoneRoundedButton4.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.siticoneRoundedButton4.HoveredState.Parent = this.siticoneRoundedButton4;
-            this.siticoneRoundedButton4.Location = new System.Drawing.Point(1107, 398);
+            this.siticoneRoundedButton4.Location = new System.Drawing.Point(1107, 329);
             this.siticoneRoundedButton4.Margin = new System.Windows.Forms.Padding(4);
             this.siticoneRoundedButton4.Name = "siticoneRoundedButton4";
             this.siticoneRoundedButton4.ShadowDecoration.Parent = this.siticoneRoundedButton4;
             this.siticoneRoundedButton4.Size = new System.Drawing.Size(207, 33);
             this.siticoneRoundedButton4.TabIndex = 186;
             this.siticoneRoundedButton4.Text = "Reset HWID";
-            this.siticoneRoundedButton4.Click += new System.EventHandler(this.siticoneRoundedButton4_Click);
+            this.siticoneRoundedButton4.Click += new System.EventHandler(this.SiticoneRoundedButton4_Click);
             // 
             // panel5
             // 
@@ -628,7 +630,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // pictureBox1
             // 
@@ -671,7 +673,7 @@
             this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHelp.UseVisualStyleBackColor = false;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            this.btnHelp.Click += new System.EventHandler(this.BtnHelp_Click);
             // 
             // btnExit
             // 
@@ -693,7 +695,7 @@
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // pictureBox2
             // 
@@ -736,7 +738,7 @@
             this.siticoneRoundedButton5.Size = new System.Drawing.Size(291, 33);
             this.siticoneRoundedButton5.TabIndex = 190;
             this.siticoneRoundedButton5.Text = "Tableau des sanctions";
-            this.siticoneRoundedButton5.Click += new System.EventHandler(this.siticoneRoundedButton5_Click);
+            this.siticoneRoundedButton5.Click += new System.EventHandler(this.SiticoneRoundedButton5_Click);
             // 
             // siticoneRoundedButton7
             // 
@@ -756,7 +758,7 @@
             this.siticoneRoundedButton7.Size = new System.Drawing.Size(291, 33);
             this.siticoneRoundedButton7.TabIndex = 191;
             this.siticoneRoundedButton7.Text = "Gdoc Jedisky";
-            this.siticoneRoundedButton7.Click += new System.EventHandler(this.siticoneRoundedButton7_Click);
+            this.siticoneRoundedButton7.Click += new System.EventHandler(this.SiticoneRoundedButton7_Click);
             // 
             // siticoneRoundedButton8
             // 
@@ -776,7 +778,27 @@
             this.siticoneRoundedButton8.Size = new System.Drawing.Size(291, 33);
             this.siticoneRoundedButton8.TabIndex = 192;
             this.siticoneRoundedButton8.Text = "Historique des sanctions";
-            this.siticoneRoundedButton8.Click += new System.EventHandler(this.siticoneRoundedButton8_Click);
+            this.siticoneRoundedButton8.Click += new System.EventHandler(this.SiticoneRoundedButton8_Click);
+            // 
+            // siticoneRoundedButton9
+            // 
+            this.siticoneRoundedButton9.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.siticoneRoundedButton9.BorderThickness = 1;
+            this.siticoneRoundedButton9.CheckedState.Parent = this.siticoneRoundedButton9;
+            this.siticoneRoundedButton9.CustomImages.Parent = this.siticoneRoundedButton9;
+            this.siticoneRoundedButton9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(127)))), ((int)(((byte)(243)))));
+            this.siticoneRoundedButton9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneRoundedButton9.ForeColor = System.Drawing.Color.White;
+            this.siticoneRoundedButton9.HoveredState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.siticoneRoundedButton9.HoveredState.Parent = this.siticoneRoundedButton9;
+            this.siticoneRoundedButton9.Location = new System.Drawing.Point(780, 417);
+            this.siticoneRoundedButton9.Margin = new System.Windows.Forms.Padding(4);
+            this.siticoneRoundedButton9.Name = "siticoneRoundedButton9";
+            this.siticoneRoundedButton9.ShadowDecoration.Parent = this.siticoneRoundedButton9;
+            this.siticoneRoundedButton9.Size = new System.Drawing.Size(534, 33);
+            this.siticoneRoundedButton9.TabIndex = 193;
+            this.siticoneRoundedButton9.Text = "Close Overlay";
+            this.siticoneRoundedButton9.Click += new System.EventHandler(this.SiticoneRoundedButton9_Click);
             // 
             // Paramètre
             // 
@@ -784,6 +806,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(39)))), ((int)(((byte)(42)))));
             this.ClientSize = new System.Drawing.Size(1509, 835);
+            this.Controls.Add(this.siticoneRoundedButton9);
             this.Controls.Add(this.siticoneRoundedButton8);
             this.Controls.Add(this.siticoneRoundedButton7);
             this.Controls.Add(this.siticoneRoundedButton5);
@@ -879,5 +902,6 @@
         private Siticone.UI.WinForms.SiticoneRoundedButton siticoneRoundedButton5;
         private Siticone.UI.WinForms.SiticoneRoundedButton siticoneRoundedButton7;
         private Siticone.UI.WinForms.SiticoneRoundedButton siticoneRoundedButton8;
+        private Siticone.UI.WinForms.SiticoneRoundedButton siticoneRoundedButton9;
     }
 }

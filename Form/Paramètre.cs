@@ -286,8 +286,8 @@ namespace Loader
 
         public class PlayerInfo
         {
-            public string id { get; set; }
-            public string name { get; set; }
+            public string Id { get; set; }
+            public string Name { get; set; }
         }
 
         private async Task<string> GetPlayerUUID(string playerName)
@@ -308,7 +308,7 @@ namespace Loader
                         // Vous devrez peut-être utiliser une classe de désérialisation JSON ou extraire l'UUID manuellement.
                         // Par exemple :
                         var playerInfo = JsonConvert.DeserializeObject<PlayerInfo>(json);
-                        return playerInfo?.id;
+                        return playerInfo?.Id;
                     }
                     else
                     {
@@ -353,28 +353,28 @@ namespace Loader
             }
         }
 
-        private void btnTools_Click(object sender, EventArgs e)
+        private void BtnTools_Click(object sender, EventArgs e)
         {
             Warn warn = new Warn();
             warn.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             Gestion gestion = new Gestion();
             gestion.Show();
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Rembourse rembourse = new Rembourse();
             rembourse.Show();
             this.Hide();
         }
 
-        private async void siticoneRoundedButton3_Click(object sender, EventArgs e)
+        private async void SiticoneRoundedButton3_Click(object sender, EventArgs e)
         {
             var options = new RestClientOptions("https://keyauth.win/api/seller/?sellerkey=fd2267d8a99e7a5324d8a5276be26ed1&type=editemail&user=" + key.Text + "&email=" + siticoneRoundedTextBox3.Text);
             var client = new RestClient(options);
@@ -393,7 +393,7 @@ namespace Loader
 
         }
 
-        private void siticoneRoundedButton1_Click(object sender, EventArgs e)
+        private void SiticoneRoundedButton1_Click(object sender, EventArgs e)
         {
             string username = siticoneRoundedTextBox1.Text;
             Login.KeyAuthApp.ChangeUsername(username);
@@ -406,7 +406,7 @@ namespace Loader
             label7.Text = "" + UnixTimeToDateTime(long.Parse(Login.KeyAuthApp.user_data.lastlogin));
         }
 
-        private void siticoneRoundedButton2_Click(object sender, EventArgs e)
+        private void SiticoneRoundedButton2_Click(object sender, EventArgs e)
         {
             string username = key.Text;
             string email = siticoneRoundedTextBox2.Text;
@@ -420,7 +420,7 @@ namespace Loader
             label7.Text = "" + UnixTimeToDateTime(long.Parse(Login.KeyAuthApp.user_data.lastlogin));
         }
 
-        private async void siticoneRoundedButton4_Click(object sender, EventArgs e)
+        private async void SiticoneRoundedButton4_Click(object sender, EventArgs e)
         {
             var options = new RestClientOptions("https://keyauth.win/api/seller/?sellerkey=fd2267d8a99e7a5324d8a5276be26ed1&type=resetuser&user=" + key.Text);
             var client = new RestClient(options);
@@ -438,47 +438,60 @@ namespace Loader
             label7.Text = "" + UnixTimeToDateTime(long.Parse(Login.KeyAuthApp.user_data.lastlogin));
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             Main main = new Main();
             main.Show();
             this.Hide();
         }
 
-        private void btnHelp_Click(object sender, EventArgs e)
+        private void BtnHelp_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
             Vérif Vérif = new Vérif();
             Vérif.Show();
             this.Hide();
         }
 
-        private void siticoneRoundedButton5_Click(object sender, EventArgs e)
+        private void SiticoneRoundedButton5_Click(object sender, EventArgs e)
         {
             Process.Start("https://docs.google.com/spreadsheets/d/1NZFOAEe__1vOpMlI2EbPkyJBn1qyTGKUrXQn6Sl7sdc/");
         }
 
-        private void siticoneRoundedButton7_Click(object sender, EventArgs e)
+        private void SiticoneRoundedButton7_Click(object sender, EventArgs e)
         {
             Process.Start("https://docs.google.com/document/d/1PpT2Ac4UR4ZcnOjrtm2XPgqnaIOZJOiEcFfAWIIaSsc/");
         }
 
-        private void siticoneRoundedButton8_Click(object sender, EventArgs e)
+        private void SiticoneRoundedButton8_Click(object sender, EventArgs e)
         {
             Process.Start("https://ban.jedisky.fr/index.php");
         }
 
-        private async void btnExit_Click(object sender, EventArgs e)
+        private async void BtnExit_Click(object sender, EventArgs e)
         {
             Déconnexion(); // Exécute la fonction de déconnexion
             await Task.Delay(TimeSpan.FromSeconds(1));
 
             Environment.Exit(0); // Quittez l'application après le délai
             this.Close(); // Cela déclenchera à nouveau l'événement Form_Closing
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            Demande demande = new Demande();
+            demande.Show();
+            this.Hide();
+        }
+
+        private void SiticoneRoundedButton9_Click(object sender, EventArgs e)
+        {
+            Overlays Overlays = new Overlays();
+            Overlays.Close();
         }
     }
 }
